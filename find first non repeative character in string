@@ -1,0 +1,37 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner s= new Scanner(System.in);
+        String str=s.nextLine();
+        boolean found=false;
+        for(int i=0;i<str.length();i++)
+        {
+            boolean b=true;
+            for(int j=0;j<str.length();j++)
+            {
+                if(i!=j&&str.charAt(j)==str.charAt(i))
+                {
+                    b=false;
+                    break;
+                }
+            } 
+            if(b)
+            {
+               found=true;
+               System.out.print(str.charAt(i));
+                break;
+            }
+            
+        }
+        if(!found)
+            {
+                System.out.println("All the characters are repetitive");
+            }
+        
+        
+        
+        
+       
+    }
+}
